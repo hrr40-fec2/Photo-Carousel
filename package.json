@@ -4,7 +4,7 @@
   "description": "Package for Photo Carousel repo",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack --mode production",
     "server-dev": "nodemon server/index.js",
     "react-dev": "webpack -d --watch"
@@ -33,6 +33,9 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
+    "eslint": "^6.2.1",
+    "jest": "^24.9.0",
+    "jest-puppeteer": "^4.3.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
   }
