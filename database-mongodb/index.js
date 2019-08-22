@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/images', {useNewUrlParser: true});
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -8,8 +8,10 @@ db.once('open', () => {
 });
 
 var photoSchema = new mongoose.Schema({
+  id: Number
   imageUrl: String
 });
 
 var Photo = mongoose.model('Photo', photoSchema);
 
+module.exports = Photo;
