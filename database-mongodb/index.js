@@ -8,8 +8,16 @@ db.once('open', () => {
 });
 
 var photoSchema = new mongoose.Schema({
-  id: Number
-  imageUrl: String
+  title: String,
+  director: String,
+  cast: String,
+  mpaaRating,
+  summary: String,
+  releaseDate: String,
+  imdbRating,
+  runtime: String,
+  genre: [String],
+  imageUrls: [String]
 });
 
 var Photo = mongoose.model('Photo', photoSchema);
