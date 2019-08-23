@@ -2,11 +2,19 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var port = 3000;
+var Photos = require('../database/index.js');
 
 app.use(express.static('./client/dist'));
 app.use(express.static('http://hrr40-fec2-movie-list.s3-website.ca-central-1.amazonaws.com'));
 
 app.get('/api/photos', (req, res) => {
+  Photos.find().limit(1)
+    .then((data) => {
+      res.send(data).status(200);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
 
 app.listen(port, () => {
