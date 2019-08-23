@@ -3,8 +3,9 @@ var app = express();
 var bodyParser = require('body-parser');
 var port = 3000;
 
-app.get('/api/photos', (req, res) => {
+app.use(express.static('./client/dist'));
 
+app.get('/api/photos', (req, res) => {
 });
 
 app.listen(port, () => {
