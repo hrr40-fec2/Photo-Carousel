@@ -56,7 +56,7 @@ var addMovies = (n) => {
     if (err) {
       console.log(err);
     }
-  })
+  });
 };
 
 addMovies(100);
