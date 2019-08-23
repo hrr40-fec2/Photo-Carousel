@@ -29,12 +29,12 @@ var createMovie = () => {
   var movie = {
     title: faker.lorem.words(),
     director: faker.name.findName(),
-    cast: [faker.name.findName(),faker.name.findName(),faker.name.findName()],
+    cast: [faker.name.findName(), faker.name.findName(), faker.name.findName()],
     mpaaRating: randomRating(),
     summary: faker.lorem.paragraph(),
     releaseDate: faker.date.recent(),
     imdbRatings: (Math.floor(Math.random() * 10)),
-    runtime: `${Math.floor(Math.random() * 300)} mins`
+    runtime: `${Math.floor(Math.random() * 300)} mins`,
     genre: [randomGenre(), randomGenre(), randomGenre()],
     imageUrls: randomImagesGenerator(25)
   };

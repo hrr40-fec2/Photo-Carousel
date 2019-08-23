@@ -10,11 +10,11 @@ db.once('open', () => {
 var photoSchema = new mongoose.Schema({
   title: String,
   director: String,
-  cast: String,
-  mpaaRating,
+  cast: [String],
+  mpaaRating: String,
   summary: String,
   releaseDate: String,
-  imdbRating,
+  imdbRating: Number,
   runtime: String,
   genre: [String],
   imageUrls: [String]
