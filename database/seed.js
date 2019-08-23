@@ -17,6 +17,14 @@ var randomImages = () => {
   return `https://hrr40-fec2-movie-list.s3.ca-central-1.amazonaws.com/movie-images/${Math.floor(Math.random() * 25)}.jpg`;
 };
 
+var randomImagesGenerator = (imageNum) => {
+  var images = [];
+  for (var i = 0; i < imageNum; i++) {
+    images.push(randomImages());
+  }
+  return images;
+};
+
 var createMovie = () => {
   var movie = {
     title: faker.lorem.words(),
@@ -25,10 +33,10 @@ var createMovie = () => {
     mpaaRating: randomRating(),
     summary: faker.lorem.paragraph(),
     releaseDate: faker.date.recent(),
-    imdbRatings: (Math.floor(Math.random() * 5)),
+    imdbRatings: (Math.floor(Math.random() * 10)),
     runtime: `${Math.floor(Math.random() * 300)} mins`
     genre: [randomGenre(), randomGenre(), randomGenre()],
-    imageUrls: [randomImages(), randomImages(), randomImages(), randomImages()]
+    imageUrls: randomImagesGenerator(25)
   };
   return movie;
 };
