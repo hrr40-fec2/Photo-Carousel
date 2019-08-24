@@ -55,3 +55,12 @@ var addMovies = (n) => {
 };
 
 addMovies(100);
+
+module.exports = {
+  randomGenre,
+  randomRating,
+  randomImages,
+  randomImagesGenerator,
+  createMovie,
+  addMovies
+};
