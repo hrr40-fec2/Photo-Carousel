@@ -8,25 +8,24 @@ var Wrapper = styled.div`
   width: 100%;
 `;
 
-const Page = styled.div`
-  width: 50%;
-`;
 export default class Carousel extends React.Component {
   render() {
     var settings = {
       dots: true,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1
     };
 
     return (
-      <Slider {...settings}>
-        <Page>Page 1</Page>
-        <Page>Page 2</Page>
-        <Page>Page 3</Page>
-      </Slider>
+      <Wrapper>
+        <Slider {...settings}>
+          <div>
+            <ImageList />
+          </div>
+        </Slider>
+      </Wrapper>
     );
   }
 }
