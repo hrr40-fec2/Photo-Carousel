@@ -1,4 +1,6 @@
 import React from 'react';
+import Carousel from './Carousel.jsx';
+import $ from 'jquery';
 
 
 export default class App extends React.Component {
@@ -8,9 +10,18 @@ export default class App extends React.Component {
       images: []
     }
   }
+  componentDidMount() {
+    // $.get(, (imageUrls) => {
+    //   this.setState({
+    //     images: imageUrls
+    //   });
+    // });
+  }
+
+
   render() {
     return (
-      <h1>Hello World!</h1>
+      <Carousel />
     )
   }
 };
