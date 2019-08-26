@@ -10,13 +10,6 @@ export default class App extends React.Component {
       images: []
     }
   }
-  componentDidMount() {
-    // $.get(, (imageUrls) => {
-    //   this.setState({
-    //     images: imageUrls
-    //   });
-    // });
-  }
 
 
   render() {
