@@ -11,6 +11,9 @@
     "db-seed": "node database/seed.js",
     "lint": "eslint"
   },
+  "jest": {
+    "setupFiles": ["./client/src/setupTests.js"]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hrr40-fec2/Photo-Carousel.git"
