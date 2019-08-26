@@ -1,7 +1,16 @@
 import React from 'react';
-import Slider from 'react-slider';
+import Slider from 'react-slick';
 import ImageList from './ImageList.jsx';
+import styled from 'styled-components';
 
+
+var Wrapper = styled.div`
+  width: 100%;
+`;
+
+const Page = styled.div`
+  width: 50%;
+`;
 export default class Carousel extends React.Component {
   render() {
     var settings = {
@@ -14,24 +23,9 @@ export default class Carousel extends React.Component {
 
     return (
       <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
+        <Page>Page 1</Page>
+        <Page>Page 2</Page>
+        <Page>Page 3</Page>
       </Slider>
     );
   }
