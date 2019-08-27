@@ -12,7 +12,9 @@
     "lint": "eslint"
   },
   "jest": {
-    "setupFiles": ["./client/src/setupTests.js"]
+    "setupFiles": [
+      "./client/src/setupTests.js"
+    ]
   },
   "repository": {
     "type": "git",
