@@ -17,6 +17,20 @@ app.get('/api/photos', (req, res) => {
     });
 });
 
+app.get('/api/allPhotos', (req, res) => {
+  Photos.find().limit(1)
+    .then((photos) => {
+      var photoArray = photos.map((photo) => {
+        return  photo.imageUrls;
+      });
+      photoArray = photoArray.shift();
+      res.send(photoArray).status(200);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+
 app.listen(port, () => {
   console.log(`now listening on port ${port}`);
 })

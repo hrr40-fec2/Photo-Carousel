@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from './Carousel.jsx';
 import styled from 'styled-components';
+import axios from 'axios';
 
 var AppWrapper = styled.div`
   display: flex;
@@ -13,6 +14,18 @@ export default class App extends React.Component {
     this.state = {
       images: []
     }
+  }
+
+  getImages() {
+    axios.get('http://localhost:3000/api/allPhotos')
+      .then((photos) => {
+        this.setState({
+          images: photos
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      });
   }
 
 
