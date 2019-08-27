@@ -32,7 +32,7 @@ export default class App extends React.Component {
   render() {
     return (
       // <AppWrapper>
-      //   <Carousel />
+      //   <Carousel images={this.state.images}/>
       // </AppWrapper>
       <h1>hello world</h1>
     )
