@@ -31,9 +31,10 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <AppWrapper>
-        <Carousel />
-      </AppWrapper>
+      // <AppWrapper>
+      //   <Carousel />
+      // </AppWrapper>
+      <h1>hello world</h1>
     )
   }
 };
