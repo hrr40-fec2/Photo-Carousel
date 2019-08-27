@@ -8,13 +8,7 @@
     "build": "webpack --mode production",
     "server-dev": "nodemon server/index.js",
     "react-dev": "webpack -d --watch",
-    "db-seed": "node database/seed.js",
-    "lint": "eslint"
-  },
-  "jest": {
-    "setupFiles": [
-      "./client/src/setupTests.js"
-    ]
+    "live-server": "live-server"
   },
   "repository": {
     "type": "git",
@@ -36,7 +30,9 @@
     "nodemon": "^1.19.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "supertest": "^4.0.2"
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -54,7 +50,7 @@
     "i": "^0.3.6",
     "jest": "^24.9.0",
     "jest-puppeteer": "^4.3.0",
-    "npm": "^6.11.2",
+    "jquery": "^3.4.1",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
   }
