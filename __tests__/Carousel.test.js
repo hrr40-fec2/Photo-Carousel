@@ -5,7 +5,7 @@ import Carousel from '../client/src/components/Carousel.jsx';
 
 describe('Carousel component', () => {
   //it should move from one slide to the next
-  it('should be able to change slides' () => {
+  it('should be able to change slides', () => {
 
   });
   //it should hold 25 photos
