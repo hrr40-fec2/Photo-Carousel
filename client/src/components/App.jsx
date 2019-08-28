@@ -14,16 +14,21 @@ export default class App extends React.Component {
     this.state = {
       images: []
     }
+    this.getImages = this.getImages.bind(this);
   }
 
+  componentDidMount() {
+    this.getImages();
+  }
+
+
   getImages() {
+    var that = this;
     axios.get('http://localhost:3000/api/allPhotos')
       .then((photos) => {
-        this.setState({
-          images: photos
-        })
-        .catch((error) => {
-          console.log(error);
+        console.log(photos)
+        that.setState({
+          images: photos.data
         });
       });
   }
@@ -31,10 +36,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-      // <AppWrapper>
-      //   <Carousel images={this.state.images}/>
-      // </AppWrapper>
-      <h1>hello world</h1>
+      <AppWrapper>
+        <Carousel photos={this.state.images}/>
+      </AppWrapper>
     )
   }
 };

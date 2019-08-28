@@ -9,10 +9,14 @@ var Wrapper = styled.div`
 `;
 
 export default class Carousel extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     var settings = {
       dots: true,
-      infinite: false,
+      infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1
@@ -21,9 +25,13 @@ export default class Carousel extends React.Component {
     return (
       <Wrapper>
         <Slider {...settings}>
-          <div>
-            <ImageList />
-          </div>
+          {this.props.photos.map((photo, index) => {
+            return (
+              <div key={index}>
+                <img src={photo}></img>
+              </div>
+            )
+          })}
         </Slider>
       </Wrapper>
     );
