@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
-var port = 3000;
 var Photos = require('../database/index.js');
 
 app.use(express.static('./client/dist'));
@@ -31,6 +30,6 @@ app.get('/api/allPhotos', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-  console.log(`now listening on port ${port}`);
-})
+
+
+module.exports = app;
