@@ -26,7 +26,6 @@ export default class App extends React.Component {
     var that = this;
     axios.get('http://localhost:3000/api/allPhotos')
       .then((photos) => {
-        console.log(photos)
         that.setState({
           images: photos.data
         });
