@@ -3,6 +3,7 @@ import Carousel from './Carousel.jsx';
 import styled from 'styled-components';
 import axios from 'axios';
 
+
 var AppWrapper = styled.div`
   display: flex;
   justify-content: center;
