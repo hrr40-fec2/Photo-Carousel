@@ -4,9 +4,8 @@ import ImageList from './ImageList.jsx';
 import styled from 'styled-components';
 
 
-
 var Wrapper = styled.div`
-  width: 100%;
+  width: 50%;
   height 50%;
 `;
 
@@ -25,8 +24,9 @@ export default class Carousel extends React.Component {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 5,
-      slidesToScroll: 1
+      slidesToShow: 6,
+      slidesToScroll: 5,
+      centerPadding: 30
     };
 
     var imageStyle = {
