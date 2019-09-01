@@ -13,11 +13,16 @@ module.exports = {
         }
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(sa|sc|c)ss$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
+          { loader: 'style-loader' },
+          {
+            loader:'css-loader',
+            options: {
+              modules: true
+            }
+          },
+          { loader: 'sass-loader' }
         ]
       }
     ]
