@@ -11,10 +11,10 @@ describe("App", () => {
   });
 
   test("it calls componentDidMount", () => {
-    sinon.spy(App.prototype, 'componentDidMount');
-    const wrapper = mount(<App />);
-    expect(App.proptype.componentDidMount).to.have.property('callCount', 1);
-    expect(wrapper.state().length).toBe(25);
+    var spy = sinon.spy(App.prototype, 'componentDidMount');
+    const wrapper = shallow(<App />);
+    wrapper.instance().componentDidMount();
+    expect(spy).toHaveBeenCalled;
   });
 
 })

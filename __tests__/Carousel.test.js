@@ -5,16 +5,12 @@ import Carousel from '../client/src/components/Carousel.jsx';
 import App from '../client/src/components/App.jsx';
 
 describe('Carousel component', () => {
-  //it should hold 25 photos
-  it('should hold 25 photos', () => {
-
-  });
-
   //renders a Carousel component
   it('renders correctly', () => {
     const images = ['randomImage1', 'randomImage2'];
-    const carousel = shallow(<Carousel images={images} />);
+    const carousel = shallow(<Carousel photos={images} />);
     expect(carousel).toMatchSnapshot();
+    expect(carousel.find('h1').text()).toBe('Photos');
   });
 
   it('should hold images', () => {
