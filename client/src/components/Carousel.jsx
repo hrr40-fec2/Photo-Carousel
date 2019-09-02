@@ -4,7 +4,7 @@ import ImageList from './ImageList.jsx';
 import styled from 'styled-components';
 
 
-function NextArrow(props) {
+var NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
@@ -15,7 +15,7 @@ function NextArrow(props) {
   );
 }
 
-function PrevArrow(props) {
+var PrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
     <div
