@@ -1,4 +1,7 @@
 module.exports = {
   testEnvironment: 'node',
-  verbose: true
+  verbose: true,
+  setupFiles: [
+    __dirname
+  ]
 };
