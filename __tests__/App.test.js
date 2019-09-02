@@ -14,9 +14,7 @@ describe("App", () => {
     sinon.spy(App.prototype, 'componentDidMount');
     const wrapper = mount(<App />);
     expect(App.proptype.componentDidMount).to.have.property('callCount', 1);
+    expect(wrapper.state().length).toBe(25);
   });
 
-  test("it holds state with images", () => {
-
-  });
 })
