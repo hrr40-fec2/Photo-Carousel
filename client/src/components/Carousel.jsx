@@ -1,6 +1,5 @@
 import React from 'react';
 import Slider from 'react-slick';
-import ImageList from './ImageList.jsx';
 import styled from 'styled-components';
 
 
