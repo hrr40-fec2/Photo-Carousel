@@ -1,10 +1,13 @@
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import React from 'react';
 import App from '../client/src/components/App.jsx';
 import Tests from '../client/src/setupTests.js';
+import sinon from 'sinon';
 
 describe("App", () => {
   test("it properly renders", () => {
-    shallow(<App />);
+    const app = shallow(<App />);
+    expect(app.getElements()).toMatchSnapshot();
   });
+
 })
