@@ -12,8 +12,7 @@ describe("App", () => {
 
   test("it calls componentDidMount", () => {
     var spy = sinon.spy(App.prototype, 'componentDidMount');
-    const wrapper = shallow(<App />);
-    wrapper.instance().componentDidMount();
+    const wrapper = mount(<App />);
     expect(spy).toHaveBeenCalled;
   });
 
