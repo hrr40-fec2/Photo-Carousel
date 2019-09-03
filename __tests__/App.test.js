@@ -10,10 +10,4 @@ describe("App", () => {
     expect(app.getElements()).toMatchSnapshot();
   });
 
-  test("it calls componentDidMount", () => {
-    var spy = sinon.spy(App.prototype, 'componentDidMount');
-    const wrapper = mount(<App />);
-    expect(spy).toHaveBeenCalled;
-  });
-
 })
