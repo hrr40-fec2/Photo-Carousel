@@ -3,5 +3,8 @@ module.exports = {
   verbose: true,
   setupFiles: [
     __dirname
-  ]
+  ],
+  globals: {
+    window: {}
+  }
 };
