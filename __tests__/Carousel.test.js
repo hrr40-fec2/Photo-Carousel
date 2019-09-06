@@ -25,4 +25,12 @@ describe('Carousel component', () => {
     expect(carousel).toMatchSnapshot();
   });
 
+  test("passes down props with images", () => {
+    const images = ['randomImage1', 'randomImage2', 'randomImage3', 'randomImage4'];
+    const carousel = shallow(<Carousel photos={images} />).instance();
+
+    expect(carousel.props.photos.length).toBe(4);
+    expect(carousel.props.photos[2]).toBe('randomImage3');
+  });
+
 });

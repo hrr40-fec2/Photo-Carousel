@@ -8,8 +8,10 @@
     "test:cover": "jest --coverage",
     "open:coverage": "open ./coverage/lcov-report/index.html",
     "build": "webpack --mode production",
-    "server-dev": "nodemon server/index.js",
-    "react-dev": "webpack -d --watch"
+    "server-dev": "nodemon server/server.js",
+    "react-dev": "webpack -d --watch",
+    "lint": "eslint client",
+    "seed": "node database/seed.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
@@ -53,6 +56,7 @@
     "jest": "^24.9.0",
     "jest-puppeteer": "^4.3.0",
     "jquery": "^3.4.1",
+    "raf": "^3.4.1",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
   }

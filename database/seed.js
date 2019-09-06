@@ -14,7 +14,7 @@ var randomRating = () => {
 };
 
 var randomImages = () => {
-  return `https://hrr40-fec2-movie-list.s3.ca-central-1.amazonaws.com/movie-images/${Math.floor(Math.random() * 26)}.jpg`;
+  return `https://hrr40-fec2-movie-list.s3.ca-central-1.amazonaws.com/movie-images/${Math.floor(Math.random() * 24)}.jpg`;
 };
 
 var randomImagesGenerator = (imageNum) => {
