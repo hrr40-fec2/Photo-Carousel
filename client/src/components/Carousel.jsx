@@ -2,29 +2,6 @@ import React from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
 
-
-// var NextArrow = (props) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "grey" }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// var PrevArrow = (props) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "grey" }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-
 var Wrapper = styled.div`
   width: 50%;
   height 50%;
@@ -52,9 +29,7 @@ export default class Carousel extends React.Component {
       slidesToShow: 6,
       slidesToScroll: 2,
       centerPadding: 30,
-      className: 'slides',
-      // nextArrow: <NextArrow />,
-      // prevArrow: <PrevArrow />
+      className: 'slides'
     };
 
     var imageStyle = {
