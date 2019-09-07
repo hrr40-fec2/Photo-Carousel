@@ -16,7 +16,6 @@ describe('Carousel component', () => {
     const images = ['randomImage1', 'randomImage2'];
     const carousel = shallow(<Carousel photos={images} />);
     expect(carousel).toMatchSnapshot();
-    expect(carousel.find('h1').text()).toBe('Photos');
   });
 
   test('should hold images', () => {

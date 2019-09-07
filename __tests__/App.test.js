@@ -25,8 +25,4 @@ describe("App", () => {
     expect(wrapper.state.images[0]).toBe('randomImg1');
   });
 
-  test("should mount", () => {
-    const wrapper = mount(<App />);
-
-  });
 });
