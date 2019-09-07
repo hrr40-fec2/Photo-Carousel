@@ -1,10 +1,12 @@
-FROM
+FROM node:12.2.0-alpine
 
-WORKDIR
-
-ENV
-
-COPY package.json
+# Create app directory
+WORKDIR /usr/src/app
+# Install app dependencies
+COPY package*.json ./
 RUN npm install
+# Copy app source code
+COPY . .
 
-CMD ["npm", "start"]
+# start app
+CMD ["npm", "run", "seed-server-start"]
