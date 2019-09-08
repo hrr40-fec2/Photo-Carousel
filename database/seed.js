@@ -1,5 +1,5 @@
 
-var Photos = mongoose.model('Photo', photoSchema);
+var Photos = require('./index.js');
 var faker = require('faker');
 
 var genres = ['drama', 'thriller', 'comedy', 'horror', 'science fiction', 'romance', 'action', 'western', 'adventure', 'crime', 'documentary', 'war', 'epic', 'history', 'sports', 'noir', 'superhero', 'fantasy', 'fighting', 'gangster', 'biography', 'family', 'mystery'];
@@ -48,9 +48,12 @@ const addMovies = (n) => {
   for (var i = 0; i < n; i ++) {
     seeds.push(createMovie());
   }
-  Photos.insertMany(seeds, (err) => {
+  Photos.insertMany(seeds, (err, docs) => {
     if (err) {
       console.log(err);
+    } else {
+      console.log('inserted data');
+      process.exit(0);
     }
   });
 };

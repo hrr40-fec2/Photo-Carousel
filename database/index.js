@@ -2,8 +2,9 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://mongo/images', {useNewUrlParser: true});
 
 var db = mongoose.connection;
+db.on('connection', () => console.log('connected to mongo'));
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {});
+
 
 var photoSchema = new mongoose.Schema({
   title: String,
