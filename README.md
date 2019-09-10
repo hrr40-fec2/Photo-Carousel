@@ -39,12 +39,3 @@ Testing/coverage:
 ```
 npm run test:cover
 ```
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
