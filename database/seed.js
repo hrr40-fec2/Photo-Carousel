@@ -1,3 +1,4 @@
+
 var Photos = require('./index.js');
 var faker = require('faker');
 
@@ -42,14 +43,17 @@ var createMovie = () => {
 };
 
 
-var addMovies = (n) => {
+const addMovies = (n) => {
   var seeds = [];
   for (var i = 0; i < n; i ++) {
     seeds.push(createMovie());
   }
-  Photos.insertMany(seeds, (err) => {
+  Photos.insertMany(seeds, (err, docs) => {
     if (err) {
       console.log(err);
+    } else {
+      console.log('inserted data');
+      process.exit(0);
     }
   });
 };
